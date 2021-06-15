@@ -15,6 +15,8 @@ namespace Using_Generics
             Console.WriteLine("Maximum Number");
             int output = MaximumNumber.MaxNumber(11, 22, 33);
             Console.WriteLine(output);
+            double doubleoutput = MaximumNumber.MaxNumber(11.5, 22.6, 12.7);
+            Console.WriteLine(doubleoutput);
            
         }
     }

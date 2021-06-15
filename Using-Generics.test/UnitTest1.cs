@@ -8,7 +8,7 @@ namespace Using_Generics.test
     {
         MaximumNumber Maxnum = new MaximumNumber();
         [Test]
-        public void Given_FirstNumberMax_ReturnsNumber()
+        public void GivenInteger_FirstNumberMax_ReturnsNumber()
         {
             //Arrange
             int firstNumber = 40;
@@ -24,7 +24,7 @@ namespace Using_Generics.test
         }
 
         [Test]
-        public void Given_SecondNumberMax_ReturnsNumber()
+        public void GivenInteger_SecondNumberMax_ReturnsNumber()
         {
             //Arrange
             int firstNumber = -6;
@@ -39,7 +39,7 @@ namespace Using_Generics.test
             Assert.AreEqual(expected, result);
         }
         [Test]        
-        public void Given_ThirdNumberMax_ReturnsNumber()
+        public void GivenInteger_ThirdNumberMax_ReturnsNumber()
         {
             //Arrange
             int firstNumber = 11;
@@ -53,6 +53,51 @@ namespace Using_Generics.test
             //Assert
             Assert.AreEqual(expected, result);
 
+        }
+        [Test]
+        public void Givendouble_FirstNumberMax_ReturnsNumber()
+        {
+            //Arrange
+            double firstNumber = 112.2;
+            double secondNumber = 12.1;
+            double thirdNumber = 10.1;
+            double expected = 112.2;
+
+            //Act
+            double result = MaximumNumber.MaxNumber(firstNumber, secondNumber, thirdNumber);
+
+            //Assert
+            Assert.AreEqual(expected, result);
+        }
+        [Test]
+        public void Givendouble_SecondNumberMax_ReturnsNumber()
+        {
+            //Arrange
+            double firstNumber = 112.2;
+            double secondNumber = 212.1;
+            double thirdNumber = 10.1;
+            double expected = 212.1;
+
+            //Act
+            double result = MaximumNumber.MaxNumber(firstNumber, secondNumber, thirdNumber);
+
+            //Assert
+            Assert.AreEqual(expected, result);
+        }
+        [Test]
+        public void Givendouble_thirdNumberMax_ReturnsNumber()
+        {
+            //Arrange
+            double firstNumber = 112.0;
+            double secondNumber = 12.1;
+            double thirdNumber = 510.1;
+            double expected = 510.1;
+
+            //Act
+            double result = MaximumNumber.MaxNumber(firstNumber, secondNumber, thirdNumber);
+
+            //Assert
+            Assert.AreEqual(expected, result);
         }
     }
 }

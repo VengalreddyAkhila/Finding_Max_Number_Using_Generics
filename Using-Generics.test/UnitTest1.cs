@@ -7,6 +7,9 @@ namespace Using_Generics.test
     public class Tests
     {
         MaximumNumber Maxnum = new MaximumNumber();
+        /// <summary>
+        /// testcases for maximum of 3 integernumbers
+        /// </summary>
         [Test]
         public void GivenInteger_FirstNumberMax_ReturnsNumber()
         {
@@ -54,6 +57,9 @@ namespace Using_Generics.test
             Assert.AreEqual(expected, result);
 
         }
+        /// <summary>
+        /// testcases for maximum of 3 double numbers
+        /// </summary>
         [Test]
         public void Givendouble_FirstNumberMax_ReturnsNumber()
         {
@@ -99,6 +105,9 @@ namespace Using_Generics.test
             //Assert
             Assert.AreEqual(expected, result);
         }
+        /// <summary>
+        /// testcases for maximum of 3 stringvalues
+        /// </summary>
         [Test]
         public void Givenstring_firstNumberMax_ReturnsNumber()
         {

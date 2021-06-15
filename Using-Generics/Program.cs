@@ -12,13 +12,18 @@ namespace Using_Generics
         {
             
             Console.WriteLine("Welcome to GenricsMethod");
+           
+            //getting output for intergernumbers,doublenumbers,stringnumbers
             Console.WriteLine("Maximum Number");
-            int output = MaximumNumber.MaxNumber(11, 22, 33);
-            Console.WriteLine(output);
-            double doubleoutput = MaximumNumber.MaxNumber(11.5, 22.6, 12.7);
+            MaximumNumber maxnumber = new MaximumNumber();
+            int output = MaximumNumber.MaxNumber<int>(11, 22, 33);
+            Console.WriteLine(output);           
+            double doubleoutput = MaximumNumber.MaxNumber<double>(11.5, 22.6, 12.7);
             Console.WriteLine(doubleoutput);
-            string stringoutput = MaximumNumber.MaxNumber("ab","abcd","abcdefg");
-            Console.WriteLine(stringoutput);
+            string stringoutput = MaximumNumber.MaxNumber<string>("ab","abcd","abcdefg");
+            Console.WriteLine(stringoutput);           
+
+
 
         }
     }

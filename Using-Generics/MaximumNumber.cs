@@ -4,7 +4,7 @@ using System.Text;
 
 namespace Using_Generics
 {
-     public class MaximumNumber
+    public class MaximumNumber
     {
         /// <summary>
         /// Find Maximum of 3 Integers In UC1
@@ -27,10 +27,19 @@ namespace Using_Generics
             if (thirdNum.CompareTo(firstNum) > 0 && thirdNum.CompareTo(secondNum) > 0)
             {
                 return thirdNum;
-            }            
+            }
             return 0;
         }
-        public static Double  MaxNumber(double firstNum, double secondNum, double thirdNum)
+
+     
+        /// <summary>
+        /// find the maximum of 3 numbers in UC2
+        /// </summary>
+        /// <param name="firstNum"></param>
+        /// <param name="secondNum"></param>
+        /// <param name="thirdNum"></param>
+        /// <returns></returns>
+        public static Double MaxNumber(double firstNum, double secondNum, double thirdNum)
         {
             if (firstNum.CompareTo(secondNum) > 0 && firstNum.CompareTo(thirdNum) > 0)
             {
@@ -46,6 +55,13 @@ namespace Using_Generics
             }
             return 0;
         }
+        /// <summary>
+        /// find the maximum of 3 string in UC3
+        /// </summary>
+        /// <param name="firstNumstring"></param>
+        /// <param name="secondNumstring"></param>
+        /// <param name="thirdNumstring"></param>
+        /// <returns></returns>
         public static string MaxNumber(string firstNumstring, string secondNumstring, string thirdNumstring)
         {
             if (firstNumstring.CompareTo(secondNumstring) > 0 && firstNumstring.CompareTo(thirdNumstring) > 0)
@@ -63,5 +79,23 @@ namespace Using_Generics
             return default;
         }
 
+
+        public static T MaxNumber<T>(T firstNum, T secondNum, T thirdNum)
+        {
+
+            if (Comparer<T>.Default.Compare(firstNum, secondNum) > 0 && Comparer<T>.Default.Compare(firstNum, thirdNum) > 0)
+            {
+                return firstNum;
+            }
+            if (Comparer<T>.Default.Compare(secondNum, thirdNum) > 0 && Comparer<T>.Default.Compare(secondNum, firstNum) > 0)
+            {
+                return secondNum;
+            }
+            if (Comparer<T>.Default.Compare(thirdNum, firstNum) > 0 && Comparer<T>.Default.Compare(thirdNum, secondNum) > 0)
+            {
+                return thirdNum;
+            }
+            return default;
+        }
     }
 }

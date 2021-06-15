@@ -46,6 +46,22 @@ namespace Using_Generics
             }
             return 0;
         }
+        public static string MaxNumber(string firstNumstring, string secondNumstring, string thirdNumstring)
+        {
+            if (firstNumstring.CompareTo(secondNumstring) > 0 && firstNumstring.CompareTo(thirdNumstring) > 0)
+            {
+                return firstNumstring;
+            }
+            if (secondNumstring.CompareTo(firstNumstring) > 0 && secondNumstring.CompareTo(thirdNumstring) > 0)
+            {
+                return secondNumstring;
+            }
+            if (thirdNumstring.CompareTo(firstNumstring) > 0 && thirdNumstring.CompareTo(secondNumstring) > 0)
+            {
+                return thirdNumstring;
+            }
+            return default;
+        }
 
     }
 }

@@ -17,7 +17,9 @@ namespace Using_Generics
             Console.WriteLine(output);
             double doubleoutput = MaximumNumber.MaxNumber(11.5, 22.6, 12.7);
             Console.WriteLine(doubleoutput);
-           
+            string stringoutput = MaximumNumber.MaxNumber("ab","abcd","abcdefg");
+            Console.WriteLine(stringoutput);
+
         }
     }
 }

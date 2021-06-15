@@ -99,5 +99,50 @@ namespace Using_Generics.test
             //Assert
             Assert.AreEqual(expected, result);
         }
+        [Test]
+        public void Givenstring_firstNumberMax_ReturnsNumber()
+        {
+            //Arrange
+            string firstNumber = "abcde";
+            string secondNumber = "abc";
+            string thirdNumber = "ab";
+            string expected = "abcde";
+
+            //Act
+            string result = MaximumNumber.MaxNumber(firstNumber, secondNumber, thirdNumber);
+
+            //Assert
+            Assert.AreEqual(expected, result);
+        }
+        [Test]
+        public void Givenstring_secondNumberMax_ReturnsNumber()
+        {
+            //Arrange
+            string  firstNumber = "ab";
+            string  secondNumber = "abcd";
+            string thirdNumber = "a";
+            string expected = "abcd";
+
+            //Act
+            string result = MaximumNumber.MaxNumber(firstNumber, secondNumber, thirdNumber);
+
+            //Assert
+            Assert.AreEqual(expected, result);
+        }
+        [Test]
+        public void Givenstring_thirdNumberMax_ReturnsNumber()
+        {
+            //Arrange
+            string firstNumber = "a";
+            string secondNumber = "abc";
+            string thirdNumber = "abcd";
+            string expected = "abcd";
+
+            //Act
+            string result = MaximumNumber.MaxNumber(firstNumber, secondNumber, thirdNumber);
+
+            //Assert
+            Assert.AreEqual(expected, result);
+        }
     }
 }
